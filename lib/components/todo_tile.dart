@@ -48,7 +48,9 @@ class TodoTile extends StatelessWidget {
 
               // task name
               Text(
-                taskName,
+                taskName.length > 20
+                  ? '${taskName.substring(0, 20)}...'
+                  : taskName,
                 style: TextStyle(
                   decoration: taskCompleted
                       ? TextDecoration.lineThrough
